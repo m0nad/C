@@ -1,9 +1,19 @@
 /*
-$ gcc -o dns-discovery dns-discovery.c -Wall -Wextra
-$ ./dns-discovery google.com hosts.txt 
-
-DNS Discovery
-  by m0nad [at] email.com
+Author	: m0nad
+aka 	: Victor Ramos Mello
+email	: m0nad /at/ email.com
+github	: https://github.com/m0nad/
+blog	: http://m0nadcoder.wordpress.com/
+copyfree: beer license, if you like this, buy me a beer
+	
+$ gcc -o dns-discovery dns-discovery.c -Wall -Wextra -lpthread -O3
+$ ./dns-discovery google.com wordlist.wl 5
+   ___  _  ______    ___  _                              
+  / _ \/ |/ / __/___/ _ \(_)__ _______ _  _____ ______ __
+ / // /    /\ \/___/ // / (_-</ __/ _ \ |/ / -_) __/ // /
+/____/_/|_/___/   /____/_/___/\__/\___/___/\__/_/  \_, / 
+                                                  /___/  
+	  by m0nad /at/ email.com
 
 academico.google.com
 accounts.google.com
@@ -11,36 +21,50 @@ ads.google.com
 alerts.google.com
 ap.google.com
 apps.google.com
+asia.google.com
 ...
-*/
 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <netdb.h>
+#include <pthread.h>
+
 #define TAM 256
 #define MAX 512
 #define SAY puts
-FILE *
-ck_fopen (char * arq, char * perm)
-{
-  FILE * file = fopen (arq, perm);
-  if (file == NULL) {
-    perror ("fopen ");
-    exit (1);
-  }
-  return file;
-}
+
+struct dd_threads_args {
+  FILE * file;
+  char * domain;
+};
+
 void
-banner ()
+erro (const char * msg)
 {
-  SAY ("\nDNS Discovery\n  by m0nad [at] email.com\n");
-}
-int
-usage ()
-{
-  SAY (" usage\n ./dns-discovery domain hosts.txt");
+  perror (msg);
   exit (1);
 }
+
+FILE *
+ck_fopen (char * path, const char * mode)
+{
+  FILE * file = fopen (path, mode);
+  if (file == NULL) 
+    erro ("fopen ");
+   
+  return file;
+}
+
+void *
+ck_malloc (size_t size)
+{
+  void * ptr = malloc (size);
+  if (ptr == NULL) 
+    erro ("malloc ");
+  return ptr;
+}
+
 void
 chomp (char * str)
 {
@@ -52,32 +76,79 @@ chomp (char * str)
     str++;
   }
 }
+
 void
-dns_discovery (char * host)
+banner ()
 {
-  struct hostent * hostip;
-  if ((hostip = gethostbyname (host)) != NULL) {
-    SAY (host);
-  } 
+  SAY (
+"   ___  _  ______    ___  _                              \n"
+"  / _ \\/ |/ / __/___/ _ \\(_)__ _______ _  _____ ______ __\n"
+" / // /    /\\ \\/___/ // / (_-</ __/ _ \\ |/ / -_) __/ // /\n"
+"/____/_/|_/___/   /____/_/___/\\__/\\___/___/\\__/_/  \\_, / \n"
+"                                                  /___/  \n"
+"\t  by m0nad /at/ email.com\n");
+}
+
+int
+usage ()
+{
+  SAY (" usage\n ./dns-discovery domain wordlist.wl [threads]\n");
+  exit (1);
+}
+
+void 
+dns_discovery (FILE * file, const char * domain)
+{
+  int errcode;
+  char line [TAM];
+  char hostname [MAX];
+  struct addrinfo * res;
+  while (fgets (line, sizeof line, file) != NULL) {
+    chomp (line);
+    snprintf (hostname, sizeof hostname, "%s.%s", line, domain);
+    errcode = getaddrinfo (hostname, NULL, NULL, &res);
+    if (errcode == 0) {
+      SAY (hostname);
+      freeaddrinfo (res);
+    } 
+  }
+}
+
+void *
+dns_discovery_thread (void * args)
+{
+  struct dd_threads_args * dns_discovery_args = (struct dd_threads_args *) args;
+  dns_discovery (dns_discovery_args->file, dns_discovery_args->domain);
+  return NULL;	
 }
 
 int
 main (int argc, char ** argv) 
 {
+  int nthreads = 1, i;
   FILE * file;
-  char line [TAM];
-  char host [MAX];
+  pthread_t * threads;
+  struct dd_threads_args dns_discovery_args;
+
   banner();
-  if (argc < 3) 
+  if (argc < 3 || argc > 4) 
     usage();
+  else if (argc == 4)
+    nthreads = atoi (argv[3]);
+
+  threads = (pthread_t *) ck_malloc (nthreads * sizeof (pthread_t)); 
  
   file = ck_fopen (argv[2], "r");
-  while (fgets (line, sizeof line, file) != NULL) {
-    chomp (line);
-    snprintf  (host, sizeof host, "%s.%s", line, argv[1]);
-    dns_discovery (host);
+  dns_discovery_args.file = file;
+  dns_discovery_args.domain = argv[1];
+  for (i = 0; i < nthreads; i++) {
+    pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)&dns_discovery_args);
   }
+  for (i = 0; i < nthreads; i++) {
+    pthread_join (threads[i], NULL);
+  }
+
+  free (threads);
   fclose (file);
-//  free (hostip);
   return 0;
 }
