@@ -126,7 +126,6 @@ int
 main (int argc, char ** argv) 
 {
   int nthreads = 1, i;
-  FILE * file;
   pthread_t * threads;
   struct dd_threads_args dns_discovery_args;
 
@@ -138,8 +137,7 @@ main (int argc, char ** argv)
 
   threads = (pthread_t *) ck_malloc (nthreads * sizeof (pthread_t)); 
  
-  file = ck_fopen (argv[2], "r");
-  dns_discovery_args.file = file;
+  dns_discovery_args.file = ck_fopen (argv[2], "r");
   dns_discovery_args.domain = argv[1];
   for (i = 0; i < nthreads; i++) {
     pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)&dns_discovery_args);
@@ -149,6 +147,6 @@ main (int argc, char ** argv)
   }
 
   free (threads);
-  fclose (file);
+  fclose (dns_discovery_args.file);
   return 0;
 }
