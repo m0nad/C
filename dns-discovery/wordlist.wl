@@ -1028,6 +1028,7 @@ arch
 archie
 archimedes
 archipel
+archivos
 archy
 arclight
 arcnet
@@ -1267,7 +1268,9 @@ augustaga
 augustana
 augustus
 aukuni
+aula
 aulait
+aulas
 aunet
 aunet1
 aurora
@@ -1328,6 +1331,7 @@ axion
 axis
 axlegate
 axon
+ay
 aya
 ayame
 aydin
@@ -1384,6 +1388,7 @@ back
 backbone
 backend
 backup
+backups
 backus
 bacs
 badger
@@ -1446,6 +1451,7 @@ barrynet
 barson
 barsoom
 barstow
+bart
 bartal
 baruch
 bas
@@ -1678,6 +1684,7 @@ bianca
 bib
 bibinext
 bibliographer
+biblioteca
 bicc
 biersch
 bierstadt
@@ -1773,6 +1780,7 @@ blackadder
 blackberry
 blackbird
 blackbird1
+blackboard
 blackface
 blackfoot
 blackhole
@@ -2035,6 +2043,7 @@ bpd5
 bpl
 bpr
 bptnasnet
+bq
 br
 br0
 br1
@@ -2499,9 +2508,11 @@ carnegie
 carol
 carpaccio
 carrara
+carro
 carrollnet
 carson
 carswell
+cart
 carter
 carto
 cary
@@ -2532,6 +2543,8 @@ cat2
 cat3
 cata
 catalog
+catalogo
+catalogue
 catawba
 cathy
 catlin
@@ -3122,6 +3135,7 @@ civileng4
 civileng5
 ciw
 cix
+cj
 ck
 cl
 cl1
@@ -3504,6 +3518,7 @@ continental
 contracts
 contrib
 control
+controller
 controllers
 controls
 conus
@@ -3599,6 +3614,7 @@ cp1
 cp240
 cp8040
 cp860
+cpanel
 cpattbry
 cpblndng
 cpc
@@ -3640,6 +3656,7 @@ cpwang
 cpwsca
 cpwscb
 cpzama
+cq
 cqenet
 cqpi
 cr
@@ -3777,6 +3794,7 @@ cse
 csee
 cseicnet
 csemne
+csg
 csgate
 csgnet
 csgwd
@@ -4077,6 +4095,7 @@ cvs
 cvspserver
 cvtc
 cvx12
+cw
 cwc
 cwi
 cwjcc
@@ -4271,6 +4290,7 @@ dbm1
 dbp
 dbri
 dbridge
+dbs
 dbstu1
 dc
 dc1
@@ -4353,6 +4373,7 @@ dcseq
 dcssvx
 dcsvan
 dcu
+dd
 ddbj
 ddeth
 ddiv
@@ -4449,6 +4470,7 @@ demon
 demonstration
 demorgan
 demos
+demostration
 den
 den65a
 denali
@@ -4536,6 +4558,7 @@ dexternet6
 dexternet7
 dexternet8
 dexternet9
+df
 dfas
 dfn
 dfnzpl
@@ -4571,6 +4594,7 @@ dgscg1
 dgsd
 dgtlsysintl
 dgw
+dh
 dha0
 dha1
 dha2
@@ -4759,6 +4783,7 @@ dmtadl
 dmz
 dmz1
 dmz2
+dn
 dn160
 dn30
 dn3000
@@ -4828,6 +4853,8 @@ dom2
 dom9
 doma
 domain
+domaincontroller
+domain-controller
 domains
 dominio
 domino
@@ -5089,10 +5116,12 @@ dutch
 duth
 duticai
 dutton
+dv
 dvax
 dvsmnthn
 dvt
 dvz
+dw
 dwagis1
 dwagis2
 dwagis3
@@ -5145,6 +5174,7 @@ e30vax
 e7
 ea
 eabrown
+eaccess
 eads
 eagle
 eagle1
@@ -5169,6 +5199,7 @@ easy
 eaton
 eatons
 eaw
+eb
 ebert
 ebirah
 ebn
@@ -5357,7 +5388,10 @@ eitc
 eitech
 eiu
 eix1
+ej
 ejemplo
+ejemplos
+ek
 eklogin
 ekms1
 ekms2
@@ -5422,6 +5456,7 @@ elxsi
 elzim
 elzip
 elzm
+em
 em0
 email
 embezzle
@@ -5534,6 +5569,7 @@ enmu
 enp
 enpc
 enrico
+enrutador
 ens
 ensa
 ensl
@@ -5549,6 +5585,7 @@ entnetcvl
 entropic
 entrprisenet
 enuxha
+eo
 eola
 eoracle
 eoracle1
@@ -5577,6 +5614,7 @@ epsilon
 epsmunu
 epss
 epv
+eq
 eql
 er
 era
@@ -5758,6 +5796,7 @@ euteeb
 euterpe
 eutes
 eutex
+ev
 eva
 evans
 evansatgw
@@ -5768,11 +5807,13 @@ evansmac4
 evansmac5
 evax
 eve
+eventos
 events
 everest
 everett
 evms
 evry
+ew
 ewc
 ewe
 ewir
@@ -5782,6 +5823,7 @@ ex
 exa
 exactnet
 example
+examples
 excalibur
 excelan
 exch
@@ -5836,10 +5878,12 @@ extrn
 extro
 exxon
 exxonchem
+ey
 eye
 eyebeam
 eyezod
 eyring
+ez
 ezh
 f
 f1
@@ -5847,6 +5891,7 @@ f2
 f3
 f4
 f5
+fa
 faa
 faajccbi
 faatcrl
@@ -5918,6 +5963,7 @@ fax
 faxhost
 faxon
 fayerlab
+fb
 fb04
 fb4
 fb5
@@ -5939,6 +5985,7 @@ fctun1
 fcul
 fcup
 fcva
+fd
 fda
 fdaoc
 fddi
@@ -5988,10 +6035,12 @@ fesnet
 fester
 feupnet
 fewarren
+ff
 ffa1
 ffa2
 ffiv
 fft
+fg
 fguest
 fh
 fhac
@@ -6158,6 +6207,7 @@ fmi
 fmnh
 fms
 fmv
+fn
 fnal
 fnbat1
 fnbat2
@@ -6271,6 +6321,7 @@ fppx07
 fppx08
 fppx10
 fpsrv
+fq
 fr
 fra
 fraggle
@@ -6427,6 +6478,7 @@ ftp-
 ftp0
 ftp2
 ftpbox
+ftpd
 ftp-data
 ftpolk
 ftpolkb1
@@ -6453,6 +6505,7 @@ ftstewrt
 ftwainwr
 ftwnwght
 ftzsmmns
+fu
 fub
 fubar
 fujisawaphrm
@@ -6484,6 +6537,7 @@ futz
 fuug
 fuw
 fuzz
+fv
 fw
 fw1
 fw-1
@@ -6500,7 +6554,9 @@ fx80
 fxis
 fxt
 fxwidegw
+fy
 fylkomoest
+fz
 fzi
 g
 g2mvs
@@ -6720,6 +6776,7 @@ gilbert
 gilboa
 gild
 gildor
+gilford
 gill
 gillem
 gimel
@@ -6737,6 +6794,8 @@ giss
 giswiz
 git
 gizmo
+gj
+gk
 gkss
 gl
 gl1
@@ -7040,6 +7099,7 @@ guava
 guemes
 guest
 guh
+guia
 guibear
 guide
 guinness
@@ -7089,6 +7149,7 @@ gwuvm
 gwxmp
 gwy
 gwyne
+gx
 gy
 gyakiti
 gyre
@@ -7103,12 +7164,14 @@ gyro7
 gyro8
 gyro9
 gyrothree
+gz
 h
 h3
 h500
 h501
 h502
 h800
+ha
 hab
 hac
 hac1
@@ -7243,6 +7306,7 @@ haydn
 hayes
 haystack
 hazeltine
+hb
 hbg
 hborg
 hbreitrose
@@ -7291,6 +7355,7 @@ hds0
 hds1
 hdsvax
 hdsx
+he
 head
 heads
 headwall
@@ -7367,6 +7432,7 @@ hewey
 hex
 heyford
 heyting
+hf
 hfb
 hfd
 hfhs
@@ -7442,6 +7508,7 @@ hitchrack
 hitcnet
 hits
 hitwide
+hj
 hjfnet
 hjulian
 hk
@@ -7467,6 +7534,7 @@ hn
 hns
 hnsnet
 hnsx
+ho
 hobbes
 hobgoblin
 hoenet
@@ -7539,6 +7607,7 @@ hot
 hotel
 hoth
 hotjobs
+hotspot
 hotstar
 hotstuff
 hotsun
@@ -7737,9 +7806,12 @@ hustat
 hut
 hutnet
 huxley
+hv
 hvcc
+hw
 hwes2
 hwy
+hx
 hy
 hyatt
 hydra
@@ -7754,6 +7826,7 @@ hypercube
 hyperdesk
 hyperion
 hypernet
+hypernova
 hz
 i
 i2
@@ -7781,6 +7854,7 @@ iat
 iata
 iatanet
 iatin
+ib
 ibaraki
 ibase
 ibc
@@ -7887,6 +7961,7 @@ ieps
 iest
 ieunet
 iew
+if
 ifam
 iff
 ifh
@@ -7942,7 +8017,9 @@ iitinc2
 iitinc3
 iitmax
 iix
+ij
 ijs
+ik
 ikaros
 ikeda
 iko
@@ -7979,7 +8056,9 @@ imail
 imap
 imap2
 imap3
+imap3d
 imap4
+imapd
 imaps
 imapvm
 imatron
@@ -7995,6 +8074,7 @@ img01
 img02
 imgblue
 imgr
+imgs
 imgyag
 imisfs1
 imisfs2
@@ -8003,6 +8083,7 @@ iml
 imnet
 imnet1
 imo
+imogen
 imoi
 imp
 impa
@@ -8118,6 +8199,7 @@ inky
 inlink
 inmet
 inmos
+inmuebles
 innet
 innet1
 innet2
@@ -8182,6 +8264,7 @@ internetb0
 internetb1
 internetb2
 internetb3
+interno
 internode
 interop
 intersil
@@ -8225,6 +8308,7 @@ iowa
 ip
 ip3sr001
 ip4u
+ip6
 ipac
 ipad
 ipc
@@ -8260,6 +8344,7 @@ ipserv
 ipsj
 ipsradspace
 ipto
+ipv6
 ipx
 iq
 ir
@@ -8448,6 +8533,7 @@ iuse
 iut
 iuvax
 iuw
+iv
 iv1
 iv2
 iv3
@@ -8460,13 +8546,16 @@ ivry
 ivs
 ivtnet
 ivy
+iw
 iwakuni
 iwanami
 iwarp
 iwm
 iwz
 ix
+iy
 iya
+iz
 izar
 izf
 izmir
@@ -8474,6 +8563,7 @@ izumi
 j
 j6
 ja
+jabber
 jabberwack
 jabberwock
 jac1
@@ -8595,6 +8685,7 @@ jcte
 jcu
 jcu1
 jcuevas
+jd
 jds
 jdssc
 je
@@ -8631,10 +8722,13 @@ jeststn
 jet
 jevons
 jezuk
+jf
 jflora
+jg
 jg01
 jg02
 jg03
+jh
 jhereg
 jhmail
 jhname
@@ -8657,6 +8751,7 @@ jitcnet1
 jitcnet2
 jitcosi
 jitctempest1
+jj
 jjb
 jk
 jku
@@ -8708,6 +8803,7 @@ jplpub1
 jplpub2
 jpmorgan
 jpn
+jq
 jr
 jrat1
 jrcispra
@@ -8766,11 +8862,13 @@ jstudies
 jsu
 jsums
 jsunet
+jt
 jtels
 jtenet
 jtf6
 jtg
 jti
+ju
 judgebell
 judith
 judy
@@ -8795,13 +8893,18 @@ jura
 jusnet
 justice
 juta
+jv
 jvnc
 jvnca
 jvncc
 jvncf
 jvncnet
+jw
 jwayne
 jwh
+jx
+jy
+jz
 k
 k2
 k351
@@ -8810,6 +8913,7 @@ k62
 k8thnet
 k98
 k9a
+ka
 kaba
 kad
 kadbase
@@ -8870,10 +8974,12 @@ kaye
 kb
 kbladet
 kbox
+kc
 kcl
 kclnet
 kcpl
 kct
+kd
 kda
 kdd
 ke
@@ -8929,6 +9035,7 @@ keynes
 keynote
 keyport
 keystone
+kf
 kfa
 kfki
 kfklan
@@ -8986,6 +9093,8 @@ kitsilano
 kitty
 kittyhawk
 kiwi
+kj
+kk
 kknetworld
 kknetworld1
 kksys
@@ -9029,6 +9138,7 @@ knrnet
 knsnet
 knss
 knwc
+ko
 koala
 koan
 kobe
@@ -9084,6 +9194,7 @@ kpmgse
 kpmgsw
 kpnu
 kpop
+kq
 kr
 kracken
 kraft
@@ -9135,6 +9246,7 @@ ksu
 ksujp
 ksunet
 ksuvxa
+kt
 kt22
 kth
 kthlan
@@ -9165,6 +9277,7 @@ kurz
 kurzweil
 kutztown
 kuwait
+kv
 kvcc
 kw
 kwan
@@ -9199,6 +9312,8 @@ labinf
 labmacii
 labnet
 labomath
+laboratories
+laboratorio
 laboratory
 labrea
 labs
@@ -9371,6 +9486,7 @@ ldap
 ldaps
 ldc
 ldgo
+le
 lead
 leader
 lear
@@ -9432,6 +9548,7 @@ lexmark
 lf
 lfd
 lfv
+lg
 lgc
 lgn
 lgnet
@@ -9503,6 +9620,7 @@ lis1
 lis2
 lis3
 lis4
+lisa
 lisbeth
 lish
 lismac
@@ -9540,6 +9658,7 @@ livorno
 livs
 liz
 lizard
+lj
 lk
 lkb
 lkbbio
@@ -9575,6 +9694,7 @@ lmpvax
 lmsc
 lmt
 lmu
+ln
 lncc
 lnec
 lnf
@@ -9628,6 +9748,7 @@ logitek
 lognet
 lognet1
 lognet2
+logon
 logos
 logs
 logsys
@@ -9684,6 +9805,7 @@ lowry
 lowry2
 lowryafb
 loyola
+lp
 lpa017
 lpa024
 lpa05
@@ -9696,6 +9818,7 @@ lpo
 lpr
 lps20
 lps40
+lq
 lr
 lrc
 lrcflx
@@ -9773,10 +9896,12 @@ lv78
 lv86
 lvc
 lvnw
+lw
 lwc
 lwood
 lworth
 lwr3b201
+lx
 lxt
 ly
 lyc
@@ -9786,6 +9911,7 @@ lynn
 lynx
 lyon
 lyris
+lz
 m
 m0
 m1
@@ -10368,6 +10494,12 @@ messina
 met
 met1
 meta
+meta01
+meta02
+meta03
+meta1
+meta2
+meta3
 metacard
 metals
 metaphor
@@ -10465,6 +10597,7 @@ midnight
 midpacnet
 midway
 midwest
+miembros
 might
 mignon
 mike
@@ -10577,6 +10710,7 @@ mitzi
 mixnet
 miyamo
 mizar
+mj
 mjh
 mjh356
 mjh62
@@ -10748,6 +10882,7 @@ montreal
 monty
 monu1
 monu3
+moodle
 moody
 moon
 moonbeam
@@ -10807,6 +10942,7 @@ mountainhome
 mouse
 mousemac
 movies
+movil
 mowest
 mozart
 mozz
@@ -11056,6 +11192,13 @@ mwraaa
 mws
 mwunix
 mx
+mx0
+mx01
+mx02
+mx03
+mx1
+mx2
+mx3
 mxinet
 mxtxnsbg
 my
@@ -11424,6 +11567,7 @@ netix
 netlab1
 netlabs
 netlib
+netmail
 netman
 netman2
 netmanager
@@ -11659,6 +11803,7 @@ nmtech
 nmtechnet
 nmtn
 nmtvax
+nn
 nnc
 nnfs
 nnip
@@ -11790,6 +11935,7 @@ nprdc
 nps
 npsnet
 npt
+nq
 nqs
 nr
 nrac
@@ -11817,6 +11963,7 @@ ns-
 ns0
 ns01
 ns02
+ns03
 ns1
 ns2
 ns3
@@ -12061,6 +12208,7 @@ oasis2
 oasys
 oaunx1
 oawang
+ob
 obce
 oberlin
 oberlindacher
@@ -12096,6 +12244,7 @@ ocs
 ocsg
 ocsnet
 ocvaxa
+od
 oddjob
 oddput
 odds
@@ -12111,6 +12260,7 @@ ody
 odysseus
 odyssey
 odyssey1
+oe
 oeaw
 oeiras
 oekblan
@@ -12129,6 +12279,7 @@ offutt2
 offuttnet
 ofsroads
 ofutz
+og
 ogden
 ogi
 oglala
@@ -12141,12 +12292,14 @@ ohostess
 ohrid
 ohstpy
 ohsu
+oi
 oil
 oippuxv
 ois
 oise
 oisenet
 oita
+oj
 ok
 oka
 okanagan
@@ -12164,6 +12317,7 @@ okr1
 okstate
 oksun1
 oksw01
+ol
 ola
 olaf
 old
@@ -12270,6 +12424,7 @@ ooc
 oodis01
 oodis02
 oolong
+op
 op2
 opal
 opc
@@ -12309,6 +12464,7 @@ optimum
 opto
 opus
 opus40
+oq
 or
 ora
 orac
@@ -12429,6 +12585,7 @@ otoole
 otsg
 otter
 otto
+ou
 ouacnet
 oucsace
 ouen
@@ -12451,6 +12608,7 @@ ovinet
 oviper
 ovl
 ovro
+ow
 owa
 owa01
 owa02
@@ -12467,6 +12625,7 @@ oxnard
 oxnet
 oxy
 oxy1
+oy
 oyster
 oz
 oz0
@@ -12632,6 +12791,7 @@ pawl
 pax
 paxvax
 payroll
+pb
 pb1
 pb2
 pba
@@ -12709,6 +12869,7 @@ pc60
 pc7
 pc8
 pc9
+pcanywhere
 pcat
 pcat1
 pcat2
@@ -12796,6 +12957,7 @@ pendelton
 pendleton
 pendletonnet
 pendragon
+pendrell
 penguin
 pengyou
 penn
@@ -12974,6 +13136,7 @@ phone
 phones
 phonon
 phorbol
+photo
 photos
 phy
 phyast
@@ -13057,6 +13220,7 @@ pittsburgh
 piv
 pix
 pixnet1
+pj
 pk
 pkdc
 pki
@@ -13231,7 +13395,9 @@ postech
 posten
 postgrad
 postgres
+postgresql
 postman
+postmaster
 postoffice
 potsdam
 pound
@@ -13278,6 +13444,7 @@ ppp9
 pppl
 pprg
 pptp
+pq
 pr
 practic
 prakinf
@@ -13299,6 +13466,8 @@ prensa
 prep
 prepnet
 prepress
+preprod
+pre-prod
 pres
 presam
 presco
@@ -13550,6 +13719,7 @@ pweh
 pwfl
 pws
 pwusda
+px
 pxpo
 py
 pylon
@@ -13559,6 +13729,7 @@ pyrite
 pythagoras
 pythia
 python
+pz
 q
 qa
 qa1
@@ -13570,11 +13741,17 @@ qa6
 qa7
 qasic
 qatif
+qb
 qbert
 qc
 qcunix
 qcunix2
+qd
+qe
 qedvb
+qf
+qg
+qh
 qhdsnet
 qhdsnet0
 qhdsnet1
@@ -13586,17 +13763,29 @@ qhdsnet6
 qhdsnet7
 qhdsnet8
 qhdsnet9
+qi
 qimr
+qj
+qk
+ql
 ql1
+qm
 qmail
 qmtp
 qmw
+qn
 qnx
+qo
 qotd
+qp
 qpat
+qq
+qr
+qs
 qt
 qtny
 qtp
+qu
 quad
 quada
 quail
@@ -13630,6 +13819,11 @@ quote
 quotes
 quotron
 qut
+qv
+qw
+qx
+qy
+qz
 r
 r01
 r02
@@ -13918,6 +14112,7 @@ restan1
 restan2
 restena
 reston
+restricted
 resumenes
 resunix
 retix
@@ -13940,6 +14135,7 @@ rfa
 rfb
 rfe
 rferl
+rg
 rgb
 rgbsys
 rgn
@@ -14047,9 +14243,11 @@ rivsideconet
 riyadh
 riyal
 rizarwsnl
+rj
 rje
 rjkj
 rjm
+rk
 rkd
 rkmac2
 rkmacse
@@ -14112,6 +14310,7 @@ robert
 roberts
 robeson
 robin
+robinhood
 robins
 robins1
 robins2
@@ -14256,6 +14455,8 @@ rpms
 rpn
 rps
 rpslmc
+rq
+rr
 rrkat1
 rrm
 rroadsnet
@@ -14366,6 +14567,7 @@ ruu
 ruuinf
 ruunet
 ruusu
+rv
 rvgc
 rvn
 rw
@@ -14378,6 +14580,7 @@ rwthphys
 rx
 rx7
 rxb
+ry
 ryerson
 ryukyu
 rz
@@ -14494,6 +14697,8 @@ samba
 sambal
 samedi
 samhou
+sample
+samples
 sampson
 sa-msg-port
 samsung
@@ -14507,6 +14712,7 @@ sanantonio
 sancho
 sancy
 sandalphon
+sandbox
 sanders
 sandgoa
 sandgoc
@@ -14798,6 +15004,7 @@ segi
 segin
 segundo
 segundo2
+seguro
 sei
 seis
 seismo
@@ -14895,6 +15102,7 @@ service1
 service2
 services
 servicio
+servicios
 servidor
 servio
 servix
@@ -15368,6 +15576,7 @@ sobeco
 soc
 socal
 socbftp
+socios
 socks
 socmpi
 socom
@@ -15582,6 +15791,8 @@ squared
 squibb
 squibb1
 squid
+squirrel
+squirrelmail
 sr
 sra
 srawhb
@@ -16274,6 +16485,7 @@ tdsccci1
 tdsccci2
 tdss
 tduknet
+te
 tea
 teale
 team
@@ -16747,6 +16959,7 @@ tplus
 tproxy
 tpts1
 tpusv
+tq
 tr
 trac
 tracer
@@ -16982,6 +17195,7 @@ txlsu
 txp
 txsnet
 txswu
+ty
 tybalt
 tyche
 tycho
@@ -17039,6 +17253,7 @@ uark
 uarknet
 uarouternet
 uars
+uat
 uazhe0
 uazuay
 ub
@@ -17127,6 +17342,7 @@ uctnet
 ucuenca
 ucunix
 ucvnet
+ud
 uda
 udac
 udallas
@@ -17224,6 +17440,7 @@ uitnet
 uiuc
 uiucdcs
 uiucuxc
+uj
 uji
 ujinet
 uk
@@ -17821,6 +18038,7 @@ uunetcustb37
 uunetcustb38
 uunetcustb39
 uunetcustb40
+uv
 uv4
 uv6
 uva
@@ -17982,6 +18200,7 @@ vboxd
 vc
 vcc
 vcu
+vd
 vds
 ve
 ve1
@@ -18003,6 +18222,7 @@ venera
 venice
 venlo
 venom
+ventas
 ventnor
 ventura
 venturaa
@@ -18036,10 +18256,12 @@ vesta
 vesuvius
 vet
 vexcel
+vf
 vfall
 vg
 vger
 vgr
+vh
 vhn
 vhsnet
 vi
@@ -18086,6 +18308,7 @@ viper
 vireo
 virgil
 virginia
+virtual
 virtualimg
 vishnu
 visidyne
@@ -18108,6 +18331,7 @@ vivs
 vix
 vixen
 vj
+vk
 vkm
 vl
 vladivostok
@@ -18154,6 +18378,7 @@ vnc
 vnet
 vnet3
 vns
+vo
 vogelweh
 vogon
 vogons
@@ -18184,8 +18409,11 @@ vpn01
 vpn02
 vpn1
 vpn2
+vpn3
 vps
 vptt
+vq
+vr
 vrinet
 vs
 vs100
@@ -18240,6 +18468,7 @@ vwxt1
 vx
 vx1
 vxm
+vy
 vym
 vz
 w
@@ -18357,6 +18586,7 @@ wcu
 wcupa
 wcw
 wcws
+wd
 wdc
 wdcnet
 wdf
@@ -18370,6 +18600,7 @@ wdsan
 wdsea
 wdsun
 wdvan
+we
 wea
 weat
 weath
@@ -18377,7 +18608,13 @@ weathe
 weather
 weaver
 web
+web0
+web01
+web02
+web03
 web1
+web2
+web3
 webaccess
 webadmin
 webalizer
@@ -18385,15 +18622,18 @@ webboard
 webcache
 webcam
 webcast
+webct
 webdev
 webdocs
 weber
 webfarm
 webhelp
 weblib
+weblog
 weblogic
 webmail
 webmaster
+webmin
 webnet
 webproxy
 webring
@@ -18461,6 +18701,7 @@ wg
 wghtptsn
 wgs
 wgtnpoly
+wh
 wh1
 what
 wheaties
@@ -18604,6 +18845,7 @@ wiznet
 wizzard
 wj
 wjh12
+wk
 wkshop
 wl
 wlan
@@ -18619,6 +18861,7 @@ wmich
 wminf1
 wmms
 wms
+wn
 wn1
 wn3
 wncs
@@ -18672,6 +18915,7 @@ wpmdss
 wpn
 wposr001
 wpt
+wq
 wr
 wr1
 wra
@@ -18746,6 +18990,7 @@ wsunet
 wsunet1
 wsunet2
 wsunet3
+wt
 wti
 wtp
 wtsu
@@ -18770,6 +19015,13 @@ wvnvaxa
 wvnvm
 wvu
 ww
+ww0
+ww01
+ww02
+ww03
+ww1
+ww2
+ww3
 wwb
 wwc
 wwu
@@ -18781,6 +19033,7 @@ www01
 www-01
 www02
 www-02
+www03
 www1
 www-1
 www2
@@ -18792,6 +19045,7 @@ www-int
 wwwmail
 wwws
 wwww
+wx
 wy
 wye
 wygov
@@ -18831,7 +19085,10 @@ xait
 xalapa
 xanth
 xanthe
+xanthus
 xap
+xb
+xc
 xc13
 xcaret
 xd
@@ -18840,6 +19097,7 @@ xdev
 xdmcp
 xdrenet
 xdus02
+xe
 xenix
 xenon
 xenurus
@@ -18849,6 +19107,9 @@ xeroxep
 xeroxep2
 xerxes
 xevious
+xf
+xg
+xh
 xhmeia
 xi
 xin
@@ -18856,10 +19117,14 @@ xinu
 xinwei
 xirion
 xiuab
+xj
+xk
 xkl
+xl
 xlink
 xlnvax
 xlogan
+xm
 xmail
 xmit
 xml
@@ -18868,6 +19133,7 @@ xn
 xncd
 xnet
 xnic
+xo
 xopen
 xor
 xospf
@@ -18876,11 +19142,14 @@ xpe
 xpilot
 xprtsys1
 xps
+xq
+xr
 xray
 x-ray
 xrly
 xrsnet
 xrsva
+xs
 xsi
 xslac
 xstation
@@ -18909,15 +19178,20 @@ xterm5
 xtest
 xtest2
 xtsun
+xu
 xul
 xv
+xw
 xware
 xx
+xy
 xylogics
 xylon
 xyplex
+xz
 y
 y1
+ya
 yale
 yaling
 yamagata
@@ -18932,7 +19206,10 @@ yarra
 yau
 yawn
 yaxkin
+yb
+yc
 ycc
+yd
 ye
 yeehah
 yeh
@@ -18942,13 +19219,22 @@ yen
 yepse
 yerevan
 yeti
+yf
 yfsnet02
 yfsneto1
+yg
+yh
+yi
 yin
+yj
+yk
 ykpam
 yktnpoe
+yl
+ym
 ymir
 ymp
+yn
 ynhh1
 ynhh2
 ynhh3
@@ -18977,9 +19263,13 @@ yosemite
 young
 yoyo
 yoyodyne
+yp
 ypcnet
 ypg
 ypig
+yq
+yr
+ys
 ysu
 ysu1
 ysub
@@ -18992,6 +19282,10 @@ yui
 yuma
 yunac
 yundt
+yv
+yw
+yx
+yy
 yz
 z
 z3950
@@ -19005,9 +19299,13 @@ zapata
 zaphod
 zappa
 zaragoza
+zb
 zbn
+zc
+zd
 zds
 zdv
+ze
 zebra
 zebrasrv
 zebu
@@ -19029,9 +19327,13 @@ zermelo
 zero
 zeta
 zeus
+zf
 zfe
 zfjanet
 zfn
+zg
+zh
+zi
 ziapwin
 ziavms
 zib
@@ -19040,12 +19342,15 @@ ziggy
 zinger
 zip
 zit
+zj
 zk
 zkm
+zl
 zlog
 z-log
 zm
 zmsun1
+zn
 znsun1
 zo
 zombie
@@ -19062,15 +19367,21 @@ zopal
 zoso
 zot
 zotz
+zp
+zq
+zr
 zrt2
 zrt7
 zrz
+zs
 zsa
 zsazsa
 zsku
+zt
 zt1
 ztal
 ztl
+zu
 zug
 zulu
 zumtobel
@@ -19087,3 +19398,5 @@ zweibrucken
 zweibruckn
 zwickau
 zx
+zy
+zz
