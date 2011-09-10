@@ -129,7 +129,7 @@ resolve_lookup (const char * hostname)
   int err, ipv = 0;
   char addrstr [TAM];
   void * ptr = NULL;
-  struct addrinfo * res, * _res, hints;
+  struct addrinfo * res, * ori_res, hints;
 
   memset (&hints, 0, sizeof hints);
   hints.ai_family = PF_UNSPEC;
@@ -139,7 +139,7 @@ resolve_lookup (const char * hostname)
   err = getaddrinfo (hostname, NULL, &hints, &res);
   if (err == 0) { //lock ?
     SAY ("%s\n", hostname);
-    _res = res;
+    ori_res = res;
     while (res) {
       switch (res->ai_family) {
         case AF_INET:
@@ -156,7 +156,7 @@ resolve_lookup (const char * hostname)
       res = res->ai_next;
     }
     SAY("\n");
-    freeaddrinfo (_res);
+    freeaddrinfo (ori_res);
   }//unlock ?
 }
 void 
