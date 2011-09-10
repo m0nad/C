@@ -123,14 +123,11 @@ usage ()
   SAY (" usage\n ./dns-discovery domain wordlist.wl [threads]\n\n");
   exit (1);
 }
-
-void 
-dns_discovery (FILE * file, const char * domain)
+void
+resolve_lookup (const char * hostname)
 {
   int err, ipv = 0;
-  char line [TAM];
   char addrstr [TAM];
-  char hostname [MAX];
   void * ptr = NULL;
   struct addrinfo * res, * _res, hints;
 
@@ -139,31 +136,39 @@ dns_discovery (FILE * file, const char * domain)
   hints.ai_socktype = SOCK_STREAM;
   hints.ai_flags |= AI_CANONNAME;
 
+  err = getaddrinfo (hostname, NULL, &hints, &res);
+  if (err == 0) { //lock ?
+    SAY ("%s\n", hostname);
+    _res = res;
+    while (res) {
+      switch (res->ai_family) {
+        case AF_INET:
+          ipv = 4;
+          ptr = &((struct sockaddr_in *) res->ai_addr)->sin_addr;
+          break;
+        case AF_INET6:
+          ipv = 6;
+          ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
+          break;
+      }
+      inet_ntop (res->ai_family, ptr, addrstr, TAM);
+      SAY ("IPv%d address: %s\n", ipv, addrstr);
+      res = res->ai_next;
+    }
+    SAY("\n");
+    freeaddrinfo (_res);
+  }//unlock ?
+}
+void 
+dns_discovery (FILE * file, const char * domain)
+{
+  char line [TAM];
+  char hostname [MAX];
+
   while (fgets (line, sizeof line, file) != NULL) {
     chomp (line);
     snprintf (hostname, sizeof hostname, "%s.%s", line, domain);
-    err = getaddrinfo (hostname, NULL, &hints, &res);
-    if (err == 0) { //lock ?
-      SAY ("%s\n", hostname);
-      _res = res;
-      while (res) {
-        switch (res->ai_family) {
-	  case AF_INET:
-	    ipv = 4;
-	    ptr = &((struct sockaddr_in *) res->ai_addr)->sin_addr;
-	    break;
-          case AF_INET6:
-	    ipv = 6;
-            ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
-            break;
-        }
-	inet_ntop (res->ai_family, ptr, addrstr, TAM);
-	SAY ("IPv%d address: %s\n", ipv, addrstr);
-	res = res->ai_next;
-      }
-      SAY("\n");
-      freeaddrinfo (_res);
-    }//unlock ?
+    resolve_lookup (hostname);
   }
 }
 
