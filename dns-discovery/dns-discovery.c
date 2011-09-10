@@ -16,12 +16,39 @@ $ ./dns-discovery google.com wordlist.wl 5
 	  by m0nad /at/ email.com
 
 academico.google.com
+IPv4 address: 74.125.229.81
+IPv4 address: 74.125.229.80
+IPv4 address: 74.125.229.84
+IPv4 address: 74.125.229.83
+IPv4 address: 74.125.229.82
+
 accounts.google.com
+IPv4 address: 74.125.45.84
+
 ads.google.com
+IPv4 address: 74.125.45.112
+
 alerts.google.com
-ap.google.com
-apps.google.com
-asia.google.com
+IPv4 address: 74.125.229.68
+IPv4 address: 74.125.229.69
+IPv4 address: 74.125.229.70
+IPv4 address: 74.125.229.71
+IPv4 address: 74.125.229.72
+IPv4 address: 74.125.229.73
+IPv4 address: 74.125.229.74
+IPv4 address: 74.125.229.75
+IPv4 address: 74.125.229.76
+IPv4 address: 74.125.229.77
+IPv4 address: 74.125.229.78
+IPv4 address: 74.125.229.79
+IPv4 address: 74.125.229.64
+IPv4 address: 74.125.229.65
+IPv4 address: 74.125.229.66
+IPv4 address: 74.125.229.67
+
+ipv6.google.com
+IPv6 address: 2001:4860:8006::67
+
 ...
 
 */
@@ -29,6 +56,7 @@ asia.google.com
 #include <stdlib.h>
 #include <netdb.h>
 #include <pthread.h>
+#include <string.h>
 
 #define TAM 256
 #define MAX 512
@@ -99,18 +127,46 @@ usage ()
 void 
 dns_discovery (FILE * file, const char * domain)
 {
-  int errcode;
+  int err, ipv;
   char line [TAM];
   char hostname [MAX];
-  struct addrinfo * res;
+  char addrstr [TAM];
+  void * ptr;
+  struct addrinfo * res, hints;
+
+  memset (&hints, 0, sizeof hints);
+  hints.ai_family = PF_UNSPEC;
+  hints.ai_socktype = SOCK_STREAM;
+  hints.ai_flags |= AI_CANONNAME;
+
+
   while (fgets (line, sizeof line, file) != NULL) {
     chomp (line);
     snprintf (hostname, sizeof hostname, "%s.%s", line, domain);
-    errcode = getaddrinfo (hostname, NULL, NULL, &res);
-    if (errcode == 0) {
+    err = getaddrinfo (hostname, NULL, &hints, &res);
+//lock ?
+    if (err == 0) {
       SAY (hostname);
+      while (res) {
+	inet_ntop (res->ai_family, res->ai_addr->sa_data, addrstr, TAM);
+        switch (res->ai_family) {
+	  case AF_INET:
+	    ipv = 4;
+	    ptr = &((struct sockaddr_in *) res->ai_addr)->sin_addr;
+	    break;
+          case AF_INET6:
+	    ipv = 6;
+            ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
+            break;
+        }
+	inet_ntop (res->ai_family, ptr, addrstr, TAM);
+	printf ("IPv%d address: %s\n", ipv, addrstr);
+	res = res->ai_next;
+      }
+      SAY("");
       freeaddrinfo (res);
     } 
+//unlock ?
   }
 }
 
