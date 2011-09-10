@@ -17,12 +17,38 @@ $ ./dns-discovery google.com wordlist.wl 5
 	  by m0nad /at/ email.com
 
 academico.google.com
-accounts.google.com
-ads.google.com
-alerts.google.com
-ap.google.com
-apps.google.com
-asia.google.com
-...
+IPv4 address: 74.125.229.81
+IPv4 address: 74.125.229.80
+IPv4 address: 74.125.229.84
+IPv4 address: 74.125.229.83
+IPv4 address: 74.125.229.82
 
+accounts.google.com
+IPv4 address: 74.125.45.84
+
+ads.google.com
+IPv4 address: 74.125.45.112
+
+alerts.google.com
+IPv4 address: 74.125.229.68
+IPv4 address: 74.125.229.69
+IPv4 address: 74.125.229.70
+IPv4 address: 74.125.229.71
+IPv4 address: 74.125.229.72
+IPv4 address: 74.125.229.73
+IPv4 address: 74.125.229.74
+IPv4 address: 74.125.229.75
+IPv4 address: 74.125.229.76
+IPv4 address: 74.125.229.77
+IPv4 address: 74.125.229.78
+IPv4 address: 74.125.229.79
+IPv4 address: 74.125.229.64
+IPv4 address: 74.125.229.65
+IPv4 address: 74.125.229.66
+IPv4 address: 74.125.229.67
+
+ipv6.google.com
+IPv6 address: 2001:4860:8006::67
+
+...
 
