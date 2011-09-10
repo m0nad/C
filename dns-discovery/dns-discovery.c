@@ -80,7 +80,6 @@ ck_fopen (char * path, const char * mode)
   FILE * file = fopen (path, mode);
   if (file == NULL) 
     erro ("fopen ");
-   
   return file;
 }
 
@@ -138,7 +137,6 @@ dns_discovery (FILE * file, const char * domain)
   hints.ai_family = PF_UNSPEC;
   hints.ai_socktype = SOCK_STREAM;
   hints.ai_flags |= AI_CANONNAME;
-
 
   while (fgets (line, sizeof line, file) != NULL) {
     chomp (line);
