@@ -132,7 +132,7 @@ dns_discovery (FILE * file, const char * domain)
   char addrstr [TAM];
   char hostname [MAX];
   void * ptr = NULL;
-  struct addrinfo * res, hints;
+  struct addrinfo * res, * _res, hints;
 
   memset (&hints, 0, sizeof hints);
   hints.ai_family = PF_UNSPEC;
@@ -145,6 +145,7 @@ dns_discovery (FILE * file, const char * domain)
     err = getaddrinfo (hostname, NULL, &hints, &res);
     if (err == 0) { //lock ?
       SAY ("%s\n", hostname);
+      _res = res;
       while (res) {
         switch (res->ai_family) {
 	  case AF_INET:
@@ -161,7 +162,7 @@ dns_discovery (FILE * file, const char * domain)
 	res = res->ai_next;
       }
       SAY("\n");
-      freeaddrinfo (res);
+      freeaddrinfo (_res);
     }//unlock ?
   }
 }
