@@ -57,10 +57,11 @@ IPv6 address: 2001:4860:8006::67
 #include <netdb.h>
 #include <pthread.h>
 #include <string.h>
+#include <arpa/inet.h>
 
 #define TAM 256
 #define MAX 512
-#define SAY puts
+#define SAY printf
 
 struct dd_threads_args {
   FILE * file;
@@ -113,24 +114,24 @@ banner ()
 " / // /    /\\ \\/___/ // / (_-</ __/ _ \\ |/ / -_) __/ // /\n"
 "/____/_/|_/___/   /____/_/___/\\__/\\___/___/\\__/_/  \\_, / \n"
 "                                                  /___/  \n"
-"\t  by m0nad /at/ email.com\n");
+"\t  by m0nad /at/ email.com\n\n");
 }
 
 int
 usage ()
 {
-  SAY (" usage\n ./dns-discovery domain wordlist.wl [threads]\n");
+  SAY (" usage\n ./dns-discovery domain wordlist.wl [threads]\n\n");
   exit (1);
 }
 
 void 
 dns_discovery (FILE * file, const char * domain)
 {
-  int err, ipv;
+  int err, ipv = 0;
   char line [TAM];
-  char hostname [MAX];
   char addrstr [TAM];
-  void * ptr;
+  char hostname [MAX];
+  void * ptr = NULL;
   struct addrinfo * res, hints;
 
   memset (&hints, 0, sizeof hints);
@@ -142,11 +143,9 @@ dns_discovery (FILE * file, const char * domain)
     chomp (line);
     snprintf (hostname, sizeof hostname, "%s.%s", line, domain);
     err = getaddrinfo (hostname, NULL, &hints, &res);
-//lock ?
-    if (err == 0) {
-      SAY (hostname);
+    if (err == 0) { //lock ?
+      SAY ("%s\n", hostname);
       while (res) {
-	inet_ntop (res->ai_family, res->ai_addr->sa_data, addrstr, TAM);
         switch (res->ai_family) {
 	  case AF_INET:
 	    ipv = 4;
@@ -158,13 +157,12 @@ dns_discovery (FILE * file, const char * domain)
             break;
         }
 	inet_ntop (res->ai_family, ptr, addrstr, TAM);
-	printf ("IPv%d address: %s\n", ipv, addrstr);
+	SAY ("IPv%d address: %s\n", ipv, addrstr);
 	res = res->ai_next;
       }
-      SAY("");
+      SAY("\n");
       freeaddrinfo (res);
-    } 
-//unlock ?
+    }//unlock ?
   }
 }
 
