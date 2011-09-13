@@ -28,23 +28,7 @@ IPv4 address: 74.125.45.84
 ads.google.com
 IPv4 address: 74.125.45.112
 
-alerts.google.com
-IPv4 address: 74.125.229.68
-IPv4 address: 74.125.229.69
-IPv4 address: 74.125.229.70
-IPv4 address: 74.125.229.71
-IPv4 address: 74.125.229.72
-IPv4 address: 74.125.229.73
-IPv4 address: 74.125.229.74
-IPv4 address: 74.125.229.75
-IPv4 address: 74.125.229.76
-IPv4 address: 74.125.229.77
-IPv4 address: 74.125.229.78
-IPv4 address: 74.125.229.79
-IPv4 address: 74.125.229.64
-IPv4 address: 74.125.229.65
-IPv4 address: 74.125.229.66
-IPv4 address: 74.125.229.67
+...
 
 ipv6.google.com
 IPv6 address: 2001:4860:8006::67
@@ -69,18 +53,18 @@ struct dd_threads_args {
 };
 
 void
-erro (const char * msg)
+error (const char * msg)
 {
   perror (msg);
   exit (1);
 }
 
 FILE *
-ck_fopen (char * path, const char * mode)
+ck_fopen (const char * path, const char * mode)
 {
   FILE * file = fopen (path, mode);
   if (file == NULL) 
-    erro ("fopen ");
+    error ("fopen ");
   return file;
 }
 
@@ -89,7 +73,7 @@ ck_malloc (size_t size)
 {
   void * ptr = malloc (size);
   if (ptr == NULL) 
-    erro ("malloc ");
+    error ("malloc ");
   return ptr;
 }
 
@@ -123,12 +107,13 @@ usage ()
   SAY (" usage\n ./dns-discovery domain wordlist.wl [threads]\n\n");
   exit (1);
 }
+
 void
 resolve_lookup (const char * hostname)
 {
   int err, ipv = 0;
-  char addrstr [TAM];
-  void * ptr = NULL;
+  char addr_str [TAM];
+  void * addr_ptr = NULL;
   struct addrinfo * res, * ori_res, hints;
 
   memset (&hints, 0, sizeof hints);
@@ -137,28 +122,27 @@ resolve_lookup (const char * hostname)
   hints.ai_flags |= AI_CANONNAME;
 
   err = getaddrinfo (hostname, NULL, &hints, &res);
-  if (err == 0) { //lock ?
+  if (err == 0) {
     SAY ("%s\n", hostname);
-    ori_res = res;
-    while (res) {
+    for (ori_res = res; res; res = res->ai_next) { 
       switch (res->ai_family) {
         case AF_INET:
           ipv = 4;
-          ptr = &((struct sockaddr_in *) res->ai_addr)->sin_addr;
+          addr_ptr = &((struct sockaddr_in *) res->ai_addr)->sin_addr;
           break;
         case AF_INET6:
           ipv = 6;
-          ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
+          addr_ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
           break;
       }
-      inet_ntop (res->ai_family, ptr, addrstr, TAM);
-      SAY ("IPv%d address: %s\n", ipv, addrstr);
-      res = res->ai_next;
+      inet_ntop (res->ai_family, addr_ptr, addr_str, TAM);
+      SAY ("IPv%d address: %s\n", ipv, addr_str);
     }
     SAY("\n");
     freeaddrinfo (ori_res);
-  }//unlock ?
+  }
 }
+
 void 
 dns_discovery (FILE * file, const char * domain)
 {
@@ -200,7 +184,7 @@ main (int argc, char ** argv)
   for (i = 0; i < nthreads; i++) {
     err = pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)&dns_discovery_args);
     if (err != 0)
-      erro ("pthread ");
+      error ("pthread ");
   }
   for (i = 0; i < nthreads; i++) {
     pthread_join (threads[i], NULL);
