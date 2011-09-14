@@ -166,7 +166,7 @@ dns_discovery_thread (void * args)
 int
 main (int argc, char ** argv) 
 {
-  int nthreads = 1, i, err;
+  int nthreads = 1, i;
   pthread_t * threads;
   struct dd_threads_args dns_discovery_args;
 
@@ -181,8 +181,7 @@ main (int argc, char ** argv)
   dns_discovery_args.file = ck_fopen (argv[2], "r");
   dns_discovery_args.domain = argv[1];
   for (i = 0; i < nthreads; i++) {
-    err = pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)&dns_discovery_args);
-    if (err != 0)
+    if (pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)&dns_discovery_args) != 0)
       error ("pthread ");
   }
   for (i = 0; i < nthreads; i++) {
