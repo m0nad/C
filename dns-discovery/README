@@ -4,7 +4,7 @@ The dns-discovery is a multi-threaded dns sub-domain brute-forcer,
 is meant to be used by pen-testers during the enumeration stage.
 Dns-discovery can resolve ipv4 and ipv6 sub-domains, for this, 
 its uses a word-list provided by the user.
-This was tested in Linux 2.6.38 and FreeBSD 8.1-Stable.
+This was tested in Linux 2.6.38 and FreeBSD 8.1-STABLE.
 Its similar to others tools, like dnsmap, but this is multi-threaded.
 
 
