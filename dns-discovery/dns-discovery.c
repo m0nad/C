@@ -111,7 +111,7 @@ usage ()
 void
 resolve_lookup (const char * hostname)
 {
-  int err, ipv = 0;
+  int ipv = 0;
   char addr_str [TAM];
   void * addr_ptr = NULL;
   struct addrinfo * res, * ori_res, hints;
@@ -121,8 +121,7 @@ resolve_lookup (const char * hostname)
   hints.ai_socktype = SOCK_STREAM;
   hints.ai_flags |= AI_CANONNAME;
 
-  err = getaddrinfo (hostname, NULL, &hints, &res);
-  if (err == 0) {
+  if (getaddrinfo (hostname, NULL, &hints, &res) == 0) {
     SAY ("%s\n", hostname);
     for (ori_res = res; res; res = res->ai_next) { 
       switch (res->ai_family) {
