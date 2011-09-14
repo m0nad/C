@@ -1,20 +1,29 @@
-DNS-Discovery is a multi-thread dns discovery tool using a wordlist
+Introduction.
 
-Author	: m0nad
-aka 	: Victor Ramos Mello
-email	: m0nad /at/ email.com
-github	: https://github.com/m0nad/
-blog	: http://m0nadcoder.wordpress.com/
-copyfree: beer license, if you like this, buy me a beer
-	
-$ gcc -o dns-discovery dns-discovery.c -Wall -Wextra -lpthread -O3
+The dns-discovery is a multi-threaded dns sub-domain brute-forcer,
+is meant to be used by pen-testers during the enumeration stage.
+Dns-discovery can resolve ipv4 and ipv6 sub-domains, for this, its use 
+a word-list provided by the user.
+This was tested in Linux 2.6.38 and FreeBSD 8.1-Stable.
+Its similar to others tools, like dnsmap, but this is multi-threaded.
+
+
+Compiling
+
+$ gcc -o dns-discovery dns-discovery.c -lpthread -O3
+
+
+Usage
+
+$ ./dns-discovery domain wordlist.wl [threads]
+ex:
 $ ./dns-discovery google.com wordlist.wl 5
    ___  _  ______    ___  _                              
   / _ \/ |/ / __/___/ _ \(_)__ _______ _  _____ ______ __
  / // /    /\ \/___/ // / (_-</ __/ _ \ |/ / -_) __/ // /
 /____/_/|_/___/   /____/_/___/\__/\___/___/\__/_/  \_, / 
                                                   /___/  
-	  by m0nad /at/ email.com
+          by m0nad /at/ email.com
 
 academico.google.com
 IPv4 address: 74.125.229.81
@@ -29,26 +38,21 @@ IPv4 address: 74.125.45.84
 ads.google.com
 IPv4 address: 74.125.45.112
 
-alerts.google.com
-IPv4 address: 74.125.229.68
-IPv4 address: 74.125.229.69
-IPv4 address: 74.125.229.70
-IPv4 address: 74.125.229.71
-IPv4 address: 74.125.229.72
-IPv4 address: 74.125.229.73
-IPv4 address: 74.125.229.74
-IPv4 address: 74.125.229.75
-IPv4 address: 74.125.229.76
-IPv4 address: 74.125.229.77
-IPv4 address: 74.125.229.78
-IPv4 address: 74.125.229.79
-IPv4 address: 74.125.229.64
-IPv4 address: 74.125.229.65
-IPv4 address: 74.125.229.66
-IPv4 address: 74.125.229.67
-
-ipv6.google.com
-IPv6 address: 2001:4860:8006::67
-
 ...
 
+
+Similar tools
+
+dnsmap
+http://code.google.com/p/dnsmap/
+
+fierce
+http://ha.ckers.org/fierce/
+
+dnsenum
+http://dnsenum.googlecode.com/files/dnsenum1.2.tar.gz
+
+
+Feedback
+
+You can send me a email to: m0nad /at/ email.com

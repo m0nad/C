@@ -39,9 +39,11 @@ IPv6 address: 2001:4860:8006::67
 #include <stdio.h>
 #include <stdlib.h>
 #include <netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <pthread.h>
 #include <string.h>
-#include <arpa/inet.h>
 
 #define TAM 256
 #define MAX 512
