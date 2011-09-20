@@ -7,7 +7,7 @@ blog	: http://m0nadcoder.wordpress.com/
 copyfree: beer license, if you like this, buy me a beer
 	
 $ gcc -o dns-discovery dns-discovery.c -Wall -Wextra -lpthread -O3
-$ ./dns-discovery google.com wordlist.wl 5
+$ ./dns-discovery google.com -w wordlist -t 5 -r reportfile
    ___  _  ______    ___  _                              
   / _ \/ |/ / __/___/ _ \(_)__ _______ _  _____ ______ __
  / // /    /\ \/___/ // / (_-</ __/ _ \ |/ / -_) __/ // /
@@ -15,23 +15,19 @@ $ ./dns-discovery google.com wordlist.wl 5
                                                   /___/  
 	  by m0nad /at/ email.com
 
-academico.google.com
-IPv4 address: 74.125.229.81
-IPv4 address: 74.125.229.80
-IPv4 address: 74.125.229.84
-IPv4 address: 74.125.229.83
-IPv4 address: 74.125.229.82
+DOMAIN : google.com
+WORDLIST: wordlist
+THREADS: 5
+REPORT: reportfile
 
 accounts.google.com
-IPv4 address: 74.125.45.84
+IPv4 address: 209.85.195.84
 
 ads.google.com
-IPv4 address: 74.125.45.112
-
-...
+IPv4 address: 72.14.204.112
 
 ipv6.google.com
-IPv6 address: 2001:4860:8006::67
+IPv6 address: 2001:4860:b009::68
 
 ...
 
@@ -116,8 +112,8 @@ usage ()
   SAY ("usage: ./dns-discovery domain [options]\n");
   SAY ("options:\n");
   SAY ("\t-w wordlist file (default : wordlist.wl)\n");
-  SAY ("\t-r report file (default : dd_domain)\n");
   SAY ("\t-t threads (default : 1)\n");
+  SAY ("\t-r report file\n");
   exit (1);
 }
 FILE *
