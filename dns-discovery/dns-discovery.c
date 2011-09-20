@@ -30,7 +30,6 @@ ipv6.google.com
 IPv6 address: 2001:4860:b009::68
 
 ...
-
 */
 #include <stdio.h>
 #include <stdlib.h>
