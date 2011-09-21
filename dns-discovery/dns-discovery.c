@@ -1,10 +1,14 @@
 /*
-Author	: m0nad
-aka 	: Victor Ramos Mello
-email	: m0nad /at/ email.com
-github	: https://github.com/m0nad/
-blog	: http://m0nadcoder.wordpress.com/
-copyfree: beer license, if you like this, buy me a beer
+DNS Discovery
+  A multi-threaded dns sub-domain brute-forcer
+
+googlecode : http://code.google.com/p/dns-discovery/
+author	   : m0nad
+aka 	   : Victor Ramos Mello
+email	   : m0nad /at/ email.com
+github	   : https://github.com/m0nad/
+blog	   : http://m0nadcoder.wordpress.com/
+copyfree   : beer license, if you like this, buy me a beer
 	
 $ gcc -o dns-discovery dns-discovery.c -Wall -Wextra -lpthread -O3
 $ ./dns-discovery google.com -w wordlist -t 5 -r reportfile
@@ -228,7 +232,7 @@ main (int argc, char ** argv)
   wordlist = parse_args (argc, argv);
   threads = (pthread_t *) ck_malloc (dd_args.nthreads * sizeof (pthread_t)); 
  
- for (i = 0; i < dd_args.nthreads; i++) {
+  for (i = 0; i < dd_args.nthreads; i++) {
     if (pthread_create (&threads[i], NULL, dns_discovery_thread, (void *)wordlist) != 0)
       error ("pthread ");
   }
