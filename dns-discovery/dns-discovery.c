@@ -45,7 +45,7 @@ IPv6 address: 2001:4860:b009::68
 #include <pthread.h>
 #include <string.h>
 
-#define TAM 256
+#define LEN 256
 #define MAX 512
 #define SAY(args...) \
   printf (args);\
@@ -117,7 +117,7 @@ usage ()
   SAY ("\t-w wordlist file (default : wordlist.wl)\n");
   SAY ("\t-t threads (default : 1)\n");
   SAY ("\t-r report file\n");
-  exit (1);
+  exit (0);
 }
 FILE *
 parse_args (int argc, char ** argv)
@@ -166,7 +166,7 @@ void
 resolve_lookup (const char * hostname)
 {
   int ipv = 0;
-  char addr_str [TAM];
+  char addr_str [LEN];
   void * addr_ptr = NULL;
   struct addrinfo * res, * ori_res, hints;
 
@@ -189,7 +189,7 @@ resolve_lookup (const char * hostname)
           addr_ptr = &((struct sockaddr_in6 *) res->ai_addr)->sin6_addr;
           break;
       }
-      inet_ntop (res->ai_family, addr_ptr, addr_str, TAM);
+      inet_ntop (res->ai_family, addr_ptr, addr_str, LEN);
       SAY ("IPv%d address: %s\n", ipv, addr_str);
     }
     SAY("\n");
@@ -201,7 +201,7 @@ resolve_lookup (const char * hostname)
 void 
 dns_discovery (FILE * file, const char * domain)
 {
-  char line [TAM];
+  char line [LEN];
   char hostname [MAX];
 
   while (fgets (line, sizeof line, file) != NULL) {
