@@ -21,7 +21,7 @@ $ ./dns-discovery google.com -w wordlist -t 5 -r reportfile
 	  by m0nad /at/ email.com
 
 DOMAIN : google.com
-DEFAULT_WL: wordlist
+WORDLIST: wordlist
 THREADS: 5
 REPORT: reportfile
 
