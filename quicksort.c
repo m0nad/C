@@ -41,5 +41,6 @@ main ()
   for(i = 0; i < MAX; i++)
     printf("%d ", lista[i]);
   puts("");
+  free(lista);
   return 0;
 }
