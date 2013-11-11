@@ -2,50 +2,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node_struct {
+struct linked_node {
 	int data;
-	struct node_struct *next;
+	struct linked_node *next;
 };
 
-struct list_struct {
-	struct node_struct *first;
+struct linked_list {
+	struct linked_node *first;
 };
 
 void
-add_after(struct node_struct *node, struct node_struct *newnode)
+add_after(struct linked_node *node, struct linked_node *newnode)
 {
 	newnode->next = node->next;
 	node->next = newnode;
 }
 
 void
-add_beginning(struct list_struct *list, struct node_struct *newnode)
+add_beginning(struct linked_list *list, struct linked_node *newnode)
 {
 	newnode->next = list->first;
 	list->first = newnode;
 }
 
 void
-del_after(struct node_struct *node)
+del_after(struct linked_node *node)
 {
-	struct node_struct *obsolete;
+	struct linked_node *obsolete;
 	obsolete = node->next;
 	node->next = node->next->next;
 	free(obsolete);
 }
 
 void
-del_beginning(struct list_struct *list)
+del_beginning(struct linked_list *list)
 {
-	struct node_struct *obsolete = list->first;
+	struct linked_node *obsolete = list->first;
 	list->first = list->first->next;
 	free(obsolete);
 }
 
-struct node_struct *
-get_node(struct list_struct *list, int data)
+struct linked_node *
+get_node(struct linked_list *list, int data)
 {
-	struct node_struct *node;
+	struct linked_node *node;
 	for (node = list->first; node; node = node->next) 
 		if (node->data == data)
 			return node;
@@ -55,11 +55,11 @@ get_node(struct list_struct *list, int data)
 #define NDNULL 1
 #define ENOMEM 2
 // alloc node and init data
-struct node_struct *
-node_struct_alloc_init(int data)
+struct linked_node *
+linked_node_alloc_init(int data)
 {
-	struct node_struct *newnode;
-	newnode = malloc(sizeof(struct node_struct));
+	struct linked_node *newnode;
+	newnode = malloc(sizeof(struct linked_node));
 	if (newnode == NULL)
 		return NULL;
 	newnode->data = data;
@@ -68,11 +68,11 @@ node_struct_alloc_init(int data)
 }
 
 int
-data_struct_create(struct list_struct *list, int data)
+node_create_beginning(struct linked_list *list, int data)
 {
-	struct node_struct *newnode;
+	struct linked_node *newnode;
 
-	newnode = node_struct_alloc_init(data);
+	newnode = linked_node_alloc_init(data);
 	if (newnode == NULL)
 		return -ENOMEM;
 
@@ -81,7 +81,7 @@ data_struct_create(struct list_struct *list, int data)
 }
 
 int
-data_struct_destroy(struct list_struct *list)
+node_destroy_beginning(struct linked_list *list)
 {
 	if (list->first == NULL)
 		return -NDNULL;
@@ -90,14 +90,14 @@ data_struct_destroy(struct list_struct *list)
 }
 
 int
-data_struct_create_after(struct list_struct *list, int data, int newdata)
+node_create_after(struct linked_list *list, int data, int newdata)
 {
-	struct node_struct *newnode;
-	struct node_struct *node = get_node(list, data);
+	struct linked_node *newnode;
+	struct linked_node *node = get_node(list, data);
 	if (!node)
 		return -NDNULL;
 
-	newnode = node_struct_alloc_init(newdata);
+	newnode = linked_node_alloc_init(newdata);
 	if (newnode == NULL)
 		return -ENOMEM;
 
@@ -106,9 +106,9 @@ data_struct_create_after(struct list_struct *list, int data, int newdata)
 }
 
 int
-data_struct_destroy_after(struct list_struct *list, int data)
+node_destroy_after(struct linked_list *list, int data)
 {
-	struct node_struct *node = get_node(list, data);
+	struct linked_node *node = get_node(list, data);
 	if (node == NULL || node->next == NULL)
 		return -NDNULL;
 
@@ -117,7 +117,7 @@ data_struct_destroy_after(struct list_struct *list, int data)
 }
 
 void
-free_list(struct list_struct *list)
+free_list(struct linked_list *list)
 {
 	while (list->first)
 		del_beginning(list);
@@ -141,9 +141,9 @@ print_error(int err)
 }
 
 void
-show_list(struct list_struct *list)
+show_list(struct linked_list *list)
 {
-	struct node_struct *node;
+	struct linked_node *node;
 	for (node = list->first; node; node = node->next)
 		printf("node->data %d\n", node->data);
 }
@@ -152,9 +152,9 @@ int
 main(void)
 {
 	int opt, err, data1, data2;
-	struct list_struct *list;
+	struct linked_list *list;
 
-	list = malloc(sizeof(struct list_struct));
+	list = malloc(sizeof(struct linked_list));
 	if (list == NULL)
 		return -1;
 	list->first = NULL;
@@ -170,13 +170,13 @@ main(void)
 			case 1:
 				printf("add beginning, data: ");
 				scanf("%d", &data1);
-				err = data_struct_create(list, data1);
+				err = node_create_beginning(list, data1);
 				if (err)
 					print_error(err);
 				break;
 			case 2:
 				printf("del beginning...\n");
-				err = data_struct_destroy(list);
+				err = node_destroy_beginning(list);
 				if (err)
 					print_error(err);
 				break;
@@ -185,7 +185,7 @@ main(void)
 				scanf("%d", &data1);
 				printf("new data: ");
 				scanf("%d", &data2);
-				err = data_struct_create_after(list, data1,
+				err = node_create_after(list, data1,
 					data2);
 				if (err)
 					print_error(err);
@@ -193,7 +193,7 @@ main(void)
 			case 4:
 				printf("del after data: \n");
 				scanf("%d", &data1);
-				err = data_struct_destroy_after(list, data1);
+				err = node_destroy_after(list, data1);
 				if (err)
 					print_error(err);
 				break;
