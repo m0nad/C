@@ -69,7 +69,7 @@ main ()
 {
   int op, n;
   struct dados s;
-  printf ("tam of the vector: ");
+  printf ("size of the vector: ");
   scanf ("%d", &n);
   s.v = (int *) malloc (n * sizeof (int));
   if (s.v == NULL) {
